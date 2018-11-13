@@ -1,0 +1,23 @@
+﻿@model Dvd_MvcCodeFirst.Models.Aluno
+
+@{
+    ViewBag.Title = "Detalhes do Aluno";
+}
+
+<h2>Details</h2>
+<fieldset>
+    <legend>Aluno</legend>
+    Email: @Html.DisplayFor(model => model.Email)
+    <br/>
+    Ano: @Html.DisplayFor(model => model.Ano)
+    <br/>
+    Aprovado: @Html.DisplayFor(model => model.Aprovado)
+    <br/>
+    Inscricao: @String.Format("{0:D}", Model.Inscricao)
+</fieldset>
+<p>
+    <li>
+        @Html.ActionLink("Retornar", "Index")
+    </li>
+</p>
+

@@ -1,0 +1,46 @@
+﻿@model Dvd_MvcCodeFirst.Models.Aluno
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Dados do aluno</h2>
+
+<fieldset>
+    <legend>Aluno</legend>
+    
+    <div class="display-label">Professor</div>
+    <div class="display-field">
+            @Html.DisplayFor(model => model.Professor.Nome)
+    </div>
+
+    <div class="display-label">Nome do Aluno</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeAluno)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">Ano</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ano)
+    </div>
+
+    <div class="display-label">Aprovado</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Aprovado)
+    </div>
+
+    <div class="display-label">Inscricao</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Inscricao)
+    </div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IDAluno }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

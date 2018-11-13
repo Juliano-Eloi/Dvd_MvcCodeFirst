@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Dvd_MvcCodeFirst.Models.Aluno>
+
+@{
+    ViewBag.Title = "Lista de Alunos";
+}
+
+<h2>Alunos</h2>
+<br/>
+<p>Total de alunos: @Model.Count()</p>
+<ul>
+    @foreach(var item in Model)
+    {
+        @*<li>@item.NomeAluno</li>*@
+
+        <li>@Html.ActionLink(item.NomeAluno,"Details", new {id = item.IDAluno })</li>
+    }
+</ul>
